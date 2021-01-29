@@ -10,9 +10,7 @@ class ApiData {
   String apiKey = '8d62505d99f54ba5adeb47e6beec7a4a';
   String baseUrl = 'https://newsapi.org/v2/top-headlines?';
   List<Article> articles = [];
-  Future<List<Article>> fetchDataFromAPI(
-    String countery,
-  ) async {
+  Future<List<Article>> fetchDataFromAPI(String countery) async {
     response = category == null
         ? await http.get('${baseUrl}country=$countery&apikey=$apiKey')
         : await http.get(

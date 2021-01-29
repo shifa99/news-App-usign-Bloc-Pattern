@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:news_app/Models/Constants.dart';
 
 double getSize(BuildContext context, double height) {

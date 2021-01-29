@@ -3,12 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app/Data/ArticlesEvents.dart';
 import 'package:news_app/Data/ArticlesStates.dart';
 import 'package:news_app/Data/BlocArticles.dart';
-import 'package:news_app/Models/Article.dart';
-import 'package:news_app/Models/Categories.dart';
 import 'package:news_app/Models/Constants.dart';
 import 'package:news_app/Models/Responsive.dart';
 import 'package:news_app/UI/Screens/HomeScreen/BuildCategories.dart';
-import 'package:news_app/UI/Screens/HomeScreen/BuildCounter.dart';
 
 import 'BuildArticlesList.dart';
 import 'BuildLoading.dart';

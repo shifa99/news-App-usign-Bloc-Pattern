@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/Models/Article.dart';
 import 'package:news_app/Models/Constants.dart';
+import 'package:news_app/UI/Screens/ArticleDetialsScreen/BuildButtonLaunch.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ArticleDetailsScreen extends StatelessWidget {
@@ -9,11 +10,7 @@ class ArticleDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final article = ModalRoute.of(context).settings.arguments as Article;
     return Scaffold(
-      appBar: AppBar(
-        title: Text('زاجل'),
-        centerTitle: true,
-        backgroundColor: Colors.teal,
-      ),
+      appBar: appBar,
       body: Column(
         children: [
           Padding(
@@ -43,24 +40,9 @@ class ArticleDetailsScreen extends StatelessWidget {
             ),
           ),
           Spacer(),
-          Expanded(
-            child: SizedBox(
-              width: double.infinity,
-              height: 50,
-              child: RaisedButton(
-                elevation: 0,
-                padding: EdgeInsets.zero,
-                color: Colors.teal,
-                onPressed: () {
-                  _launchUrl(article.contentUrl);
-                },
-                child: Text(
-                  'أضغط هنا لمشاهدة التفاصيل',
-                  style: ksecondaryStyle,
-                ),
-              ),
-            ),
-          )
+          buildButtonLuanch(lauchPressed: () {
+            _launchUrl(article.contentUrl);
+          }),
         ],
       ),
     );

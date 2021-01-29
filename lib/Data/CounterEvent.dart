@@ -1,5 +1,3 @@
-import 'package:equatable/equatable.dart';
-
 enum counterEvent { add, remove }
 
 abstract class CounterEvent {
