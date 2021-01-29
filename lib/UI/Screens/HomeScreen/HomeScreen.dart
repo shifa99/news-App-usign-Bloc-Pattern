@@ -34,11 +34,13 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Column(children: [
         Container(
           width: MediaQuery.of(context).size.width,
-          height: getSize(context, 0.2),
+          height:
+              MediaQuery.of(context).size.height * 0.2 - getSize(context) - 16,
           child: buildCategories(_blocArticles),
         ),
         Container(
-          height: getSize(context, 0.9),
+          height:
+              MediaQuery.of(context).size.height * 0.8 - getSize(context) - 16,
           child: BlocBuilder<BlocArticles, ArticlesStates>(
               builder: (context, state) {
             if (state is InitialState)

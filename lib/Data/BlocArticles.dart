@@ -17,7 +17,7 @@ class BlocArticles extends Bloc<ArticlesEvents, ArticlesStates> {
       listArticles = await apiData.fetchDataFromAPI('eg');
       yield LoadedState(listArticles);
     } catch (e) {
-      yield ErrorState(e);
+      yield ErrorState(e.toString());
     }
   }
 }
