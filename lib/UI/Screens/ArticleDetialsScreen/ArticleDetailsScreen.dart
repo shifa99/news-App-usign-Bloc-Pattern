@@ -33,7 +33,7 @@ class ArticleDetailsScreen extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
               child: Image.network(
                 article.imageUrl,
-                height: 300,
+                // height: 300,
                 fit: BoxFit.cover,
               ),
             ),
